@@ -10,7 +10,9 @@ if (isset($_POST['submit'])) {
 
     $result = mysqli_query($conn, $sql);
     if ($result) {
-        echo "Data inserted";
+
+        header('location:display.php');
+        // echo "Data inserted";
     } else {
         die(mysqli_error($conn));
     }
@@ -28,7 +30,7 @@ if (isset($_POST['submit'])) {
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
 
-    <title>Hello, world!</title>
+    <title>CRUD Operation</title>
 </head>
 
 <body>
